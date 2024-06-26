@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.xmu.controllers.FontController">
+   <children>
+      <HBox layoutX="37.0" layoutY="70.0" prefHeight="30.0" prefWidth="227.0">
+         <children>
+            <ComboBox fx:id="fontStyleComboBox" prefHeight="36.0" prefWidth="108.0" />
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <ComboBox fx:id="fontSizeComboBox" prefHeight="36.0" prefWidth="106.0" />
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <ComboBox fx:id="fontColorComboBox" prefHeight="36.0" prefWidth="105.0" />
+         </children>
+      </HBox>
+      <Label layoutX="37.0" layoutY="46.0" text="字体样式" />
+      <Label layoutX="115.0" layoutY="46.0" text="字体大小" />
+      <Label layoutX="192.0" layoutY="46.0" text="字体颜色" />
+      <Button fx:id="confirmButton" layoutX="120.0" layoutY="130.0" mnemonicParsing="false" text="确认" />
+   </children>
+</AnchorPane>

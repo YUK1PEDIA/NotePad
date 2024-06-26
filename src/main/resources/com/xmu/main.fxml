@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540" prefWidth="600" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.xmu.controllers.MainController">
+  <children>
+    <MenuBar prefHeight="25.0" prefWidth="600">
+      <menus>
+        <Menu mnemonicParsing="false" text="文件">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#New" text="新建" />
+            <MenuItem mnemonicParsing="false" onAction="#Open" text="打开" />
+            <MenuItem mnemonicParsing="false" onAction="#Save" text="保存" />
+            <MenuItem mnemonicParsing="false" onAction="#SaveAs" text="另存为" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="编辑">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#Undo" text="撤销" />
+            <MenuItem mnemonicParsing="false" onAction="#Redo" text="重做" />
+            <MenuItem mnemonicParsing="false" onAction="#Find" text="查找与替换" />
+            <MenuItem mnemonicParsing="false" onAction="#Font" text="字体" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="查看">
+          <items>
+            <MenuItem fx:id="autoWrapMenuItem" mnemonicParsing="false" onAction="#autoWrapText" text="自动换行" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <TextArea fx:id="textArea" layoutY="26.0" prefHeight="476.0" prefWidth="600">
+      <contextMenu>
+        <ContextMenu>
+          <items>
+            <MenuItem mnemonicParsing="false" text="复制" />
+            <MenuItem mnemonicParsing="false" text="粘贴" />
+            <MenuItem mnemonicParsing="false" text="全选" />
+            <MenuItem mnemonicParsing="false" text="剪切" />
+          </items>
+        </ContextMenu>
+      </contextMenu>
+    </TextArea>
+    <HBox layoutY="510.0" prefHeight="32.0" prefWidth="600.0">
+      <children>
+        <Label fx:id="positionLabel" prefHeight="24.0" prefWidth="168.0" text="行1，列1" />
+        <Separator orientation="VERTICAL" prefHeight="200.0" />
+        <Label fx:id="encodingLabel" text="UTF-8" />
+      </children>
+    </HBox>
+  </children>
+</AnchorPane>
